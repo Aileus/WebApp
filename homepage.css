@@ -24,7 +24,6 @@ body{
     cursor: pointer;
 }
 .sidebar{
-    background-color: rgb(138, 100, 100);
     display: inline-block;
     height: calc(100vh - 20px); 
     width: 80px; 
@@ -35,6 +34,7 @@ body{
     top: 10px; 
     box-sizing: border-box; 
     border-radius: 10px; 
+    background-color: #ca6c6c;
 }
 
 
@@ -45,7 +45,6 @@ body{
     border-right: 4px solid rgba(0, 0, 0, 0.7);
 }   
 
-/* Adjust the size of the icons inside the buttons */
 .sidebar button img {
     width: 70%;
     height: 70%;
@@ -75,73 +74,105 @@ body{
 
 #welcome{
     position: absolute;
-    left: 100px;
+    left: 120px;
     top: 20px;
     font-size: 20px;
     font-family: Overpass;
 }   
 
-
-/* .test-card{
-    color: black;
-    position: absolute;
-    margin-top: 20px;
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    border-radius: 10px;
-    display: inline;
-} */
-
-.tests h3{
-    font-size: 23px;
-}
-
-.upcoming-tests{
-    color: black;
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-    background-color:beige;
-    position: absolute;
+.container{
+    position: fixed;
     top: 100px;
     left: 100px;
-    padding: 10px;
+    
     display: inline-block;
 
+    /* background-color: orange; */
+    border-radius: 10px;
+
+    margin: 10px;
+    padding: 10px;
 }
 
-
-.assignments{
+.container .cards div{
+    background-color: rgb(255, 185, 197);
     color: black;
-    width: 400px;
+
+    border-radius: 10px;
+    margin: 10px;
+
     height: 200px;
-    border-radius: 10px;
-    background-color: beige;
-    position: absolute;
-    top: 340px;
-    left: 100px;
+    width: 200px;
+
     padding: 10px;
-    display: inline-block;
+
+    text-align: center;
+    font-size: 20px;
+
+    display: inline-block; 
+
+    transition: .3s;
 }
-.cards{
-    /* width: 140px; */
-    height: 140px;
-    background-color: rgb(238, 166, 166);
-    border-radius: 10px;
-    position: absolute;
-    top: 40px;
-    color: rgb(0, 0, 0);
-    padding-right: 10px;
-    display: inline-block;
+.container .cards div:hover ,.panel div:hover{
+    background-color: palegoldenrod;
+
+    transition: .3s;
+
+    font-size: 22px;
+
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+
+}
+.cards h3{
+    font-size: 24px;
 }
 
-.cards div {
-    font-size: 17px;
-    display: inline-block;
-    background-color: rgb(238, 166, 166);
+
+.container .cards{
+    margin: 30px;
     padding: 10px;
+
+    text-align: center;
+
+    width: auto;
+    height: auto;
+
     border-radius: 10px;
-    margin-right: 10px; 
-    width: 100px;
+    background-color: rebeccapurple;
+}
+
+.panel{
+    background-color: rgb(253, 253, 3);
+    color: black;
+
+    width: 600px;
+    height: 600px;
+
+    position: fixed;
+    
+    top: 12.8%;
+    left: 900px;
+
+    border-radius: 10px;
+
+    margin: 20px;
+    padding: 20px;
+}
+
+.panel div{
+    width: 560px;
+    height: 180px;
+
+    background-color: rgb(3, 248, 215);
+
+    border-radius: 10px;
+
+    margin-bottom:10px;
+    padding-top: 10px;
+    padding-left: 20px;
+
+    text-align: center;
+    font-size: 20px;
 }
