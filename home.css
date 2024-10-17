@@ -70,6 +70,7 @@ main p{
     display: flex;
     flex-direction: row;
     gap: 10px;
+
 }
 .boxholder{
     display: grid;
@@ -80,6 +81,9 @@ main p{
     height: 200px;
     text-align: center;
     font-size: 22px;
+}
+.box2 :first-child{
+    height: 428px;
 }
 .container{
 
