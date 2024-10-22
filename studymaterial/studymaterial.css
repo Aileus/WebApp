@@ -1,0 +1,188 @@
+/* Basic styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    background-color: #000000; /* Lighter background */
+    width: 100vw;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.tab-container {
+    width: 60%;            /* Increase the width to 90% of the viewport */
+    padding: 40px;        /* Increase padding for more space inside the container */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    display: flex;
+    border-bottom: 1px solid ;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    background-color: #f9f9f9; /* Slightly lighter for better contrast */
+    border: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    padding: 15px;
+    transition: background-color 0.3s, font-weight 0.3s;
+    font-size: 16px;
+    margin-right: 5px;
+    outline: none;
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
+    background-color: #ffffff;
+    border-bottom: 3px solid #007BFF;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: #f5f5f5;
+    height: 60vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    color: #333; /* Improved text color for better readability */
+    line-height: 1.6;
+}
+
+/* Show the first tab by default */
+#Tab1 {
+    display: block;
+}
+
+/* Styling for the square buttons */
+.square-button {
+    display: inline-flex; /* Use flex to center text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    margin-top: 10px; /* Space between heading and button */
+    transition: background-color 0.3s, transform 0.2s; /* Add a transform transition */
+    padding: 15px 20px; /* Increased padding for bigger buttons */
+    font-size: 16px; /* Adjust font size for better readability */
+    min-width: 100px; /* Set a minimum width for the buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    text-decoration: none; /* Remove underline */
+}
+
+.square-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Optional: Add a max-width for better control */
+.square-button {
+    max-width: 100%; /* Ensures it doesn’t grow too wide */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Add spacing for headings */
+h3 {
+    margin-top: 20px; /* Space above each heading */
+    margin-bottom: 10px; /* Space below each heading */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+#sidebar{
+    position: fixed; /* Make the sidebar fixed to the left */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height */
+    width: 15vw; /* Set the desired width for the sidebar */
+    background-color: #1d1d1d; /* Background color */
+    overflow-y: auto; /* Allow scrolling for content that overflows */
+    padding-top: 0;
+    z-index: 1000; /* Make sure it stays on top */    
+}
+
+#sidebar ul{
+    list-style: none;
+}
+
+#sidebar > ul > li:first-child{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    .logo{
+        font-weight: 600;
+        font-size: 28px;
+    }
+}
+#sidebar ul li.active a{
+    color: var(--accent-clr);
+
+    svg{
+        fill: var(--accent-clr);
+    }
+}
+
+#sidebar a , #sidebar .logo{
+    border-radius: .5em;
+
+    padding: .85em;
+
+    text-decoration: none;
+    color: var(--text-clr);
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    transition: 300ms ease;
+}
+#sidebar svg{
+    flex-shrink: 0;
+    fill: var(--text-clr);
+}
+
+#sidebar a span{
+    flex-grow: 1;
+}
+#sidebar a:hover{
+    background-color: var(--hover-clr);
+    transition: 300ms ease;
+    transform: scale(1.1);
+}

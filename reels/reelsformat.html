@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Feed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: black;
+        }
+
+        .reelscontainer {
+            height: 80vh;
+            width: 30vw;
+            margin-top: 4vmax;
+            display: flex;
+            overflow: auto;
+            gap: 2em;
+            flex-direction: column;
+            scroll-snap-type: y mandatory;
+        }
+
+        .reelscontainer::-webkit-scrollbar {
+            display: none;
+        }
+
+        .reel {
+            min-height: 80vh;
+            min-width: 25vw;
+            background: red;
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center;"> 
+        <div class="reelscontainer">
+            <div class="reel">sdkjfsnkjfn</div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+        </div>
+    </div>
+</body>
+</html>
