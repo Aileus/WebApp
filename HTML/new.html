@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap Scrolling Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            align-items: center;
+            /* Center the screen vertically */
+            justify-content: center;
+            /* Center the screen horizontally */
+            overflow: hidden;
+            /* Hide overflow for body */
+        }
+        
+        .screen {
+            width: 80%;
+            /* Width of the screen */
+            height: 400px;
+            /* Fixed height for the scrollable area */
+            overflow-y: auto;
+            /* Enables vertical scrolling */
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            /* Optional border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Optional shadow */
+            scroll-snap-type: y mandatory;
+            /* Enable snap scrolling */
+        }
+        
+        .scrollable-section {
+            height: 400px;
+            /* Match the height of the screen */
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* Space between sections */
+            border: 1px solid #ddd;
+            /* Optional border for separation */
+            scroll-snap-align: start;
+            /* Aligns sections to the start of the screen */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="scrollable-section">
+            <h3>Scrollable Section 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt urna non enim viverra, vitae consequat ligula cursus. Aenean euismod nisi in sem varius, vel auctor odio venenatis.</p>
+        </div>
+        <div class="scrollable-section">
+            <h3>Scrollable Section 2</h3>
+            <p>Curabitur at libero id orci interdum vestibulum. Nulla facilisi. In venenatis erat sed massa vehicula, vitae pellentesque sapien laoreet.</p>
+        </div>
+        <div class="scrollable-section">
+            <h3>Scrollable Section 3</h3>
+            <p>Vivamus ac odio a nunc consectetur consequat. Sed non nulla vel quam malesuada hendrerit. Sed vel libero sit amet orci tincidunt laoreet.</p>
+        </div>
+        <div class="scrollable-section">
+            <h3>Scrollable Section 4</h3>
+            <p>Quisque eget justo at urna auctor pretium. Aenean vulputate magna nec urna gravida, a cursus lacus volutpat.</p>
+        </div>
+    </div>
+</body>
+
+</html>
