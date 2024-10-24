@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Teacher Dashboard</h2>
+<p>Manage your classes and students here.</p>
+<a href="{% url 'create_class' %}">Create a new class</a>
+
+<h2>Create Test</h2>
+<form method="post" action="{% url 'create_test' %}">
+    {% csrf_token %}
+    {{ test_form.as_p }}
+    <button type="submit">Create Test</button>
+</form>
+
+
+<h3>Your Tests</h3>
+<ul>
+    {% for test in tests %}
+    <li>{{ test.title }} - Created on {{ test.created_at }}
+        <br>
+        <a href="{% url 'add_question_and_options' test.id %}">Add Question and Options</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Your Classes</h3>
+<ul>
+    {% for class_group in class_groups %}
+    <li>
+        {{ class_group.name }}
+        <br>
+        <a href="{% url 'generate_student_account' class_group.id %}">Add students to {{ class_group.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

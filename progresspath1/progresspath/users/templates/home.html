@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<style>
+    .home-container {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    height: 50vh;
+    margin: 50px auto;
+}
+
+/* Styling for the heading */
+.home-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Styling for the paragraphs */
+.home-container p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Styling for the links */
+.home-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+/* Hover effect for the links */
+.home-container a:hover {
+    color: #0056b3;
+    border-bottom-color: #0056b3;
+}
+</style>
+
+
+<div class="home-container">
+
+    <h2>Welcome to ProgressPath!</h2>
+    <p>Track your progress and achieve your goals with ease.</p>
+    <p>Your journey to progress starts here. Please <a href="{% url 'login' %}">log in</a> or <a href="{% url 'student_signup' %}">sign up</a>.</p>
+</div>
+{% endblock %}
